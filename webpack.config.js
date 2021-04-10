@@ -1,5 +1,5 @@
-const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+import path = require("path");
+import CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/app.ts",
