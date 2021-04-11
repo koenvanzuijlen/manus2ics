@@ -83,6 +83,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/chrome@npm:^0.0.134":
+  version: 0.0.134
+  resolution: "@types/chrome@npm:0.0.134"
+  dependencies:
+    "@types/filesystem": "*"
+    "@types/har-format": "*"
+  checksum: f84d0833e259bec5fd650becc9d4b2cbf3faf54481f6fc5505f92902bf571d0ea0ef724f28ea6b8ea9d370eba6a8ea726695f0124966c63ab3ff0c044de02f98
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.0":
   version: 3.7.0
   resolution: "@types/eslint-scope@npm:3.7.0"
@@ -114,6 +124,29 @@ __metadata:
   version: 0.0.46
   resolution: "@types/estree@npm:0.0.46"
   checksum: 69fcf647706f5b6a475ec2f9aacf73b40866f577eef6c6f33de95cc3b4897381c2a8257646f13cd5d91fffc5debfe6289b6864ba29ad349ae68703f8b993c9f6
+  languageName: node
+  linkType: hard
+
+"@types/filesystem@npm:*":
+  version: 0.0.30
+  resolution: "@types/filesystem@npm:0.0.30"
+  dependencies:
+    "@types/filewriter": "*"
+  checksum: 258d04781219eafa4a79c0b3c6279ade52bfacf79a279cd4b4a703c0bb8b531fc5323ebcbc95acebccaf28a823ee9f8682a819fdb9c0a5bb3a059aac92a026bd
+  languageName: node
+  linkType: hard
+
+"@types/filewriter@npm:*":
+  version: 0.0.29
+  resolution: "@types/filewriter@npm:0.0.29"
+  checksum: 7a178fb74d3973d422005420d1b05c9054189edbdc34511803a3090221e466b7732e4e1eff8188be59dd4bd59c566d4411efe83c0cfd66293e7b1cc7a8385975
+  languageName: node
+  linkType: hard
+
+"@types/har-format@npm:*":
+  version: 1.2.5
+  resolution: "@types/har-format@npm:1.2.5"
+  checksum: 1dbaa1d7cddb2fa0ddf533e8ae7f20bca2116738274a1a1e9fe2863b6c26e668b59ac4dfdfb45450d5c374de689721647ca891aa342e239049f69d5de3604cd9
   languageName: node
   linkType: hard
 
@@ -754,6 +787,13 @@ __metadata:
     shebang-command: ^2.0.0
     which: ^2.0.1
   checksum: 51f10036f5f1de781be98f4738d58b50c6d44f4f471069b8ab075b21605893ba1548654880f7310a29a732d6fc7cd481da6026169b9f0831cab0148a62fb397a
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:^1.10.4":
+  version: 1.10.4
+  resolution: "dayjs@npm:1.10.4"
+  checksum: 3b7bb2232fff808209870bc72d4b2000941a1aa45f0226e2907f9dd1dda306d4b3a1eb9058450fd2c324b01a007a37809ac6f9b525806a86902c55e2934cd5d5
   languageName: node
   linkType: hard
 
@@ -1631,9 +1671,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "manus2ics@workspace:."
   dependencies:
+    "@types/chrome": ^0.0.134
     "@typescript-eslint/eslint-plugin": ^4.21.0
     "@typescript-eslint/parser": ^4.21.0
     copy-webpack-plugin: ^8.1.1
+    dayjs: ^1.10.4
     eslint: ^7.24.0
     eslint-config-prettier: ^8.1.0
     husky: ^6.0.0
@@ -1642,6 +1684,7 @@ __metadata:
     typescript: ^4.2.4
     webpack: ^5.31.2
     webpack-cli: ^4.6.0
+    webpack-merge: ^5.7.3
   languageName: unknown
   linkType: soft
 

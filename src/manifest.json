@@ -1,3 +1,11 @@
 {
-  "manifest_version": 3
+  "manifest_version": 3,
+  "host_permissions": ["*://ess.manus.plus/*"],
+  "permissions": ["scripting"],
+  "background": {
+    "service_worker": "manus2ics.js"
+  },
+  "action": {
+    "default_icon": {}
+  }
 }

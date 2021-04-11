@@ -2,13 +2,17 @@ const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: "./src/app.ts",
+  entry: {
+    manus2ics: "./src/manus2ics.ts",
+    downloadics: "./src/downloadics.ts",
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "app.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
   module: {
     rules: [
@@ -23,6 +27,9 @@ module.exports = {
       patterns: [{ from: "./src/manifest.json", transform: fillManifest }],
     }),
   ],
+  optimization: {
+    runtimeChunk: false,
+  },
 };
 
 function fillManifest(buffer) {
