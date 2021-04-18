@@ -1,5 +1,5 @@
 const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -23,13 +23,13 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyWebpackPlugin({
-      patterns: [{ from: "./src/manifest.json", transform: fillManifest }],
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/manifest.json", transform: fillManifest },
+        { from: "./icon/*.png", to: "./" },
+      ],
     }),
   ],
-  optimization: {
-    runtimeChunk: false,
-  },
 };
 
 function fillManifest(buffer) {

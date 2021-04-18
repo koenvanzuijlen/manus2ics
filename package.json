@@ -4,13 +4,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "pack": "webpack --config webpack.prod.js",
+    "release": "webpack --config webpack.prod.js",
     "build": "webpack --config webpack.dev.js",
     "watch": "webpack --config webpack.dev.js --watch",
     "lint": "eslint ./",
     "postinstall": "husky install"
   },
   "dependencies": {
+    "datebook": "^6.5.1",
     "dayjs": "^1.10.4"
   },
   "devDependencies": {
@@ -26,6 +27,7 @@
     "typescript": "^4.2.4",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
-    "webpack-merge": "^5.7.3"
+    "webpack-merge": "^5.7.3",
+    "zip-webpack-plugin": "^4.0.1"
   }
 }
