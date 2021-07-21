@@ -78,7 +78,7 @@ const generateFilename = (
 
 try {
   // Check if we are on the correct page with all the elements
-  const dateSelector = document.querySelector("ctrl-calendar#txbWeek");
+  const dateSelector = document.querySelector("ctrl-calendar[type='week']");
   const schedule = document.querySelector(
     "ctrl-schedule.mobile-ready .sch-content"
   );
